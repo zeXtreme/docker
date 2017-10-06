@@ -1,5 +1,5 @@
 FROM alpine:3.6
-MAINTAINER zeXtreme <zerozwy@gmail.com>
+LABEL maintainer="zerozwy@gmail.com"
 
 ENV hostname=dyn.example.com
 ENV password=password
