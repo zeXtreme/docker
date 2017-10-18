@@ -7,6 +7,6 @@ ENV password=password
 WORKDIR /
 
 COPY heddns.py ./heddns.py
-RUN apk update && apk add python python-pip && pip install requests
+RUN apk update && apk add python py-pip && pip install requests
 
 ENTRYPOINT ["python heddns.py"]
