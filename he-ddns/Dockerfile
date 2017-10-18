@@ -7,4 +7,4 @@ ENV password=password
 COPY heddns.py /heddns.py
 RUN pip install requests
 
-CMD ["python3 /heddns.py"]
+CMD ["/heddns.py"]
