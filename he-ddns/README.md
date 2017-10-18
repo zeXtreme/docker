@@ -2,6 +2,9 @@
 # Run example:  
 ```docker run --name=ddns -dt -e hostname=dyn.example.com -e password=password zerozwy/he-ddns:latest```  
 # Environment:  
-```hostname=[your hostname]  
+```
+hostname=[your hostname]  
 password=[your domain password]  
-myip=[your ip]**(optional)**```
+myip=[your ip]**(optional)**
+```  
+If not set `myip` will auto detect device's IP
