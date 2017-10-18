@@ -9,4 +9,4 @@ WORKDIR /
 COPY heddns.py ./heddns.py
 RUN apk update && apk add python py-pip && pip install requests
 
-ENTRYPOINT ["python heddns.py"]
+ENTRYPOINT ["/usr/bin/python heddns.py"]
