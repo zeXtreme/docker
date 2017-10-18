@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM python:alpine3.6
 LABEL maintainer="zerozwy@gmail.com"
 
 ENV hostname=dyn.example.com
