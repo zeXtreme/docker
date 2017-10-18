@@ -7,4 +7,4 @@ ENV password=password
 COPY heddns.py ./heddns.py
 RUN apk update && apk add python py-pip && pip install requests && chmod +x heddns.py
 
-ENTRYPOINT [python ./heddns.py]
+ENTRYPOINT python ./heddns.py
