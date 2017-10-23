@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-
-import requests
+import urllib
 import time
 import os
 
@@ -8,8 +6,8 @@ hostname = os.environ.get('hostname')
 password = os.environ.get('password')
 myip = os.environ.get('myip')
 url = 'https://' + hostname + ':' + password + '@dyn.dns.he.net/nic/update?hostname=' + hostname + ('' if myip == None else ('&myip=' + myip))
+print('GET:', url)
 while True:
-    print('GET:', url)
-    r = requests.get(url)
-    print(r.text)
+    r = urllib.urlopen(url)
+    print(r.read())
     time.sleep(5 * 60)
