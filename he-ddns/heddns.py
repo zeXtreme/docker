@@ -10,6 +10,10 @@ myip = os.environ.get('myip')
 url = 'https://' + hostname + ':' + password + '@dyn.dns.he.net/nic/update?hostname=' + hostname + ('' if myip == None else ('&myip=' + myip))
 print('GET:', url)
 while True:
-    r = urllib.urlopen(url, context=not_verify)
-    print(r.read())
-    time.sleep(5 * 60)
+    try:
+        r = urllib.urlopen(url, context=not_verify)
+        print(r.read())
+    except Exception:
+        print('something error')
+    finally:
+        time.sleep(5 * 60)
